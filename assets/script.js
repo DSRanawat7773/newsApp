@@ -11,9 +11,15 @@ function reload(){
 async function fetchNews(query) {
     const res = await fetch(`${url}${query}&apikey=${API_KEY}`);
     const data = await res.json();
-    console.log(data)
-    bindData(data.articles);
+    console.log(data);
+    if (data.articles) {
+        bindData(data.articles);
+    } else {
+        // Handle the case where data.articles is undefined or null
+        console.error("Articles data is missing.");
+    }
 }
+
 
 function bindData(articles){
     const cardContainer = document.getElementById('cards-container');
@@ -59,7 +65,8 @@ function onNavItemClick(id){
     navItems.forEach(item => {
         if (item.id === id) {
             item.classList.add('active'); // Add 'active' class to the clicked item
-        } else {
+        } 
+        else {
             item.classList.remove('active'); // Remove 'active' class from other items
         }
     });
@@ -74,3 +81,5 @@ searchButton.addEventListener('click', ()=> {
     if(!query) return;
     fetchNews(query); 
 })
+
+
