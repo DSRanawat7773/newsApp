@@ -54,10 +54,15 @@ function filllData(cardClone, article){
 let curSelectedNav = null;
 function onNavItemClick(id){
     fetchNews(id);
-    const navItem = document.getElementById(id);
-    // curSelectedNav?.classList.remove('active');
-    // curSelectedNav = navItem;
-    // curSelectedNav.classList.add('active');
+
+    const navItems = document.querySelectorAll('.nav-item'); // Select all navigation items
+    navItems.forEach(item => {
+        if (item.id === id) {
+            item.classList.add('active'); // Add 'active' class to the clicked item
+        } else {
+            item.classList.remove('active'); // Remove 'active' class from other items
+        }
+    });
 }
 
 const searchButton = document.getElementById('search-button');

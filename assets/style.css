@@ -45,9 +45,9 @@ ul{
 
 nav{
     position: fixed;
-    background-color: white;
+    background-color: rgba(229, 220, 220, 0.923);
     background-blend-mode: color-burn;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     box-shadow: 0 0 8px rgb(73, 72, 72);
     top: 0;
     z-index: 99;
@@ -63,17 +63,19 @@ nav{
     padding-block: 10px;
 }
 
-.logo i{
-    margin: 10px;
+.logo img{
+    width: 120px;
+    /* margin: 5px; */
     word-spacing: 7px;
-    font-size: xx-large;
+    /* font-size: xx-large; */
     /* z-index: 99; */
 }
 
 .nav-links ul{
     font-family:serif;
     gap: 65px;
-    font-weight: bold;
+    font-weight: bolder;
+    
 }
 
 
@@ -90,7 +92,8 @@ nav{
 }
 
 .nav-item.active{
-    color: black;
+    text-decoration: underline;
+    /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 .search-bar{
     height: 32px;
