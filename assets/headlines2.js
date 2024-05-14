@@ -32,7 +32,7 @@ function fillCards(articles) {
             newsImg.src = article.urlToImage;
         } else {
             // Set a default image if urlToImage is missing
-            newsImg.src = 'https://via.placeholder.com/400x200';
+            newsImg.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9A0u33ZK0sQI7SmMaAOZq2obC8iplyCbqkJ2y3rTSPg&s';
             // return;
         }
 
